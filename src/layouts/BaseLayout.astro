@@ -8,8 +8,8 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
-    title?: string | undefined;
-    description?: string | undefined;
+    title: string;
+    description: string;
 }
 
 const {title, description} = Astro.props;
@@ -37,7 +37,7 @@ const {title, description} = Astro.props;
                     {name: 'home', path: ''},
                     {name: 'portfolio', path: '/portfolio(.*)'},
                     {name: 'articles', path: '/articles(.*)'},
-                    {name: 'about', path: '/about'},
+                    {name: 'about', path: '/a-propos'},
                     {name: 'any', path: '(.*)'}
                 ]
             })
@@ -56,7 +56,7 @@ const {title, description} = Astro.props;
 
 <html lang="en">
 <head>
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml"/>
     <MainHead title={title} description={description}/>
 </head>
 <body>
@@ -68,7 +68,7 @@ const {title, description} = Astro.props;
     <Footer/>
 </div>
 
-<style lang="ts">
+<style lang="ts" is:inline>
 
     :root {
         --_placeholder-bg: linear-gradient(transparent, transparent);

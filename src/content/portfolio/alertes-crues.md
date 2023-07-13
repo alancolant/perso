@@ -3,9 +3,7 @@ title: Alertes-Crues
 publishDate: 2022-07-12 01:01:11
 img: /assets/portfolio/alertes-crues.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
-description: |
-  Interface d'abonnement aux alertes de crues en Alsace.
-  L'utilisateur choisit de recevoir un SMS, un message vocal, ou les 2.
+description: Interface d'abonnement aux alertes de crues en Alsace. L'utilisateur choisit de recevoir un SMS, un message vocal, ou les 2.
 tags:
   - Joomla
   - Laravel
