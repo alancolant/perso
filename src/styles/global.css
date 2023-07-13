@@ -29,12 +29,28 @@ html.is-animating.is-leaving.from-route-portfolio.to-route-home .transition-swup
     transform: translateX(var(--swup-translate-right));
 }
 
-
-html.is-animating.from-route-about.to-route-portfolio .transition-swup {
+html.is-animating:is(.from-route-about,.from-route-articles).to-route-portfolio .transition-swup {
     transform: translateX(var(--swupe-translate-left));
 }
 
-html.is-animating.is-leaving.from-route-portfolio.to-route-about .transition-swup {
+html.is-animating.is-leaving.from-route-portfolio:is(.to-route-about,.to-route-articles) .transition-swup {
+    transform: translateX(var(--swupe-translate-left));
+}
+
+/*ARTICLES ROUTES*/
+html.is-animating:is(.from-route-home,.from-route-portfolio).to-route-articles .transition-swup {
+    transform: translateX(var(--swup-translate-right));
+}
+
+html.is-animating.is-leaving.from-route-articles:is(.to-route-home,.to-route-portfolio) .transition-swup {
+    transform: translateX(var(--swup-translate-right));
+}
+
+html.is-animating.to-route-articles:is(.from-route-about) .transition-swup {
+    transform: translateX(var(--swupe-translate-left));
+}
+
+html.is-animating.is-leaving.from-route-articles:is(.to-route-about) .transition-swup {
     transform: translateX(var(--swupe-translate-left));
 }
 
