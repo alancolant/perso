@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import ContactCTA from '../../components/ContactCTA.astro';
+import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+import ArticlePreview from "../../components/ArticlePreview.astro";
+
+const articles = (await getCollection('articles')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+
+<BaseLayout
+	title="Mes articles | Alan COLANT"
+	description="Suivez l'ensemble de mes rédactions pour rester à jour"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="Mes articles"
+				tagline="Restez à jour, suivez mes dernières rédactions."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					articles.map((article) => (
+						<li>
+							<ArticlePreview article={article} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

@@ -7,15 +7,14 @@ interface Props {
 }
 
 const {
-	title = 'Jeanine White: Personal Site',
-	description = 'The personal site of Jeanine White',
+	title = 'Alan COLANT: Développeur',
+	description = `Vous êtes à la recherche d'un développeur expérimenté pour votre futur projet, je me chargerai de concevoir votre application.`,
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
 <meta name="description" property="og:description" content={description} />
-<meta name="viewport" content="width=device-width" />
-<meta name="generator" content={Astro.generator} />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{title}</title>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
