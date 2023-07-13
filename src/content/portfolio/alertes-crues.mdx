@@ -9,6 +9,7 @@ tags:
   - Laravel
   - Web
 ---
+import Carousel from "../../components/Content/Carousel.vue";
 
 ## Interface d'abonnement à des alertes
 
@@ -25,6 +26,29 @@ L'interface front-end dialogue avec son back-end respectif via API REST.
 
 Une fois les choix effectués, l'utilisateur a la possibilité de changer de mot de passe, certaines de ses informations
 personnelles et de générer un mot de passe aléatoire qui lui sera envoyé par mail en cas d'oubli.
+
+### Images
+
+
+<Carousel images={[
+    {
+        src: "https://www.alancolant.com/img/portfolio/interface-alertes/accueil.jpg",
+        alt: 'Image 0'
+    },
+    {
+        src: "https://www.alancolant.com/img/portfolio/interface-alertes/choix_alertes.jpg",
+        alt: '1',
+    },
+    {
+        src: "https://www.alancolant.com/img/portfolio/interface-alertes/inscription.jpg",
+        alt: '1',
+    },
+    {
+        src: "https://www.alancolant.com/img/portfolio/interface-alertes/profil.jpg",
+        alt: '1',
+    }
+]} slidesPerView={1.5} client:visible />
+
 
 #### Technologies
 
