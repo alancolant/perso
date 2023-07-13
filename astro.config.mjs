@@ -5,7 +5,6 @@ import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://alancolant.github.io",
-    base: "/perso",
+    site: "https://dev.alancolant.com",
     integrations: [sitemap({}), prefetch()]
 });
