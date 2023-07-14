@@ -26,6 +26,7 @@
     "@swup/route-name-plugin": "^3.0.2",
     "@swup/scripts-plugin": "^1.1.0",
     "@swup/scroll-plugin": "^2.0.3",
+    "@tailwindcss/typography": "^0.5.9",
     "embla-carousel-vue": "^8.0.0-rc11"
   }
 }

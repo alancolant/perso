@@ -12,7 +12,7 @@ export default defineConfig({
   integrations: [sitemap({}), prefetch(),
   tailwind(),
   mdx({
-    syntaxHighlight: 'dracula',
+    syntaxHighlight: 'shiki',
     shikiConfig: {
       theme: "dracula"
     }

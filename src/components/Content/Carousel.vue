@@ -22,14 +22,14 @@ watchEffect(() => {
 })
 const scrollPrev = () => emblaApi.value?.scrollPrev();
 const scrollNext = () => emblaApi.value?.scrollNext();
-const scrollTo = (index: number) => emblaApi.value?.scrollTo(index);
+// const scrollTo = (index: number) => emblaApi.value?.scrollTo(index);
 </script>
 <template>
   <div class="embla">
     <div class="embla__viewport" ref="emblaNode">
       <div class="embla__container" :style="`--slide-size:${100/slidesPerView}%`">
         <div class="embla__slide" v-for="(image,index) in images">
-          <img :src="image.src" :alt="image.alt || `Image ${index}`"/>
+          <img :src="image.src" :alt="image.alt || `Image ${index}`" :title="image.alt"/>
         </div>
 
       </div>
@@ -37,7 +37,10 @@ const scrollTo = (index: number) => emblaApi.value?.scrollTo(index);
     <!--NEXT/PREV-->
     <button class="prev" v-if="selectedScrollSnap>0" @click="scrollPrev()">&lt;</button>
     <button class="next" v-if="selectedScrollSnap<images.length-1" @click="scrollNext()">&gt;</button>
-
+    <!--LABEL-->
+    <div class="w-full text-center mt-2" v-for="(image,index) in images" v-show="index===selectedScrollSnap">
+      {{ image.alt }}
+    </div>
   </div>
 </template>
 

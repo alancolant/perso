@@ -2,7 +2,7 @@
 title: Alertes-Crues
 publishDate: 2022-07-12 01:01:11
 img: /assets/portfolio/alertes-crues.png
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img_alt: Système d'alertes crues à la population
 description: Interface d'abonnement aux alertes de crues en Alsace. L'utilisateur choisit de recevoir un SMS, un message vocal, ou les 2.
 tags:
   - Joomla
@@ -11,57 +11,59 @@ tags:
 ---
 import Carousel from "../../components/Content/Carousel.vue";
 
-## Interface d'abonnement à des alertes
+## Projet : Interface d'abonnement à des alertes
 
-**Ce projet à pour but de donner la possibilité, à un utilisateur, de s'inscrire à un système qui, en cas d'alerte de
-crue:**
+Ce projet a été développé dans le but de permettre aux utilisateurs de s'inscrire à un système d'alerte en cas de crue. L'interface offre différentes fonctionnalités, notamment :
 
-- lui envoit un SMS
-- emet un Appel Vocal
-- ou les 2
+- L'envoi de SMS d'alerte
+- La possibilité d'émettre un appel vocal
+- La combinaison des deux options précédentes
 
-Une fois inscrit, l'utilisateur choisit à l'aide de checkboxs, les alertes qu'il/elle souhaite recevoir.
+Une fois inscrit, l'utilisateur peut sélectionner les types d'alertes qu'il souhaite recevoir en utilisant des cases à cocher.
 
-L'interface front-end dialogue avec son back-end respectif via API REST.
+L'interface front-end communique avec le back-end correspondant via une API REST, assurant ainsi une interaction fluide entre les différentes composantes du système.
 
-Une fois les choix effectués, l'utilisateur a la possibilité de changer de mot de passe, certaines de ses informations
-personnelles et de générer un mot de passe aléatoire qui lui sera envoyé par mail en cas d'oubli.
+En plus de la gestion des alertes, l'utilisateur a également la possibilité de modifier son mot de passe, de mettre à jour certaines de ses informations personnelles et de générer un mot de passe aléatoire en cas d'oubli, qui lui sera envoyé par e-mail.
 
-### Images
+### Aperçu du projet
 
+Voici quelques images illustrant les différentes étapes et fonctionnalités de l'interface :
 
 <Carousel images={[
     {
         src: "https://www.alancolant.com/img/portfolio/interface-alertes/accueil.jpg",
-        alt: 'Image 0'
+        alt: 'Page d’accueil du système d’abonnement à des alertes.'
     },
     {
         src: "https://www.alancolant.com/img/portfolio/interface-alertes/choix_alertes.jpg",
-        alt: '1',
+        alt: 'Interface de sélection des alertes souhaitées.',
     },
     {
         src: "https://www.alancolant.com/img/portfolio/interface-alertes/inscription.jpg",
-        alt: '1',
+        alt: 'Formulaire d’inscription pour les nouveaux utilisateurs.',
     },
     {
         src: "https://www.alancolant.com/img/portfolio/interface-alertes/profil.jpg",
-        alt: '1',
+        alt: 'Page de profil utilisateur permettant la gestion des informations personnelles.',
     }
-]} slidesPerView={1.5} client:visible />
+]} slidesPerView={1} client:visible/>
 
+### Technologies utilisées
 
-#### Technologies
-
-- **Languages**
-  - PHP
-  - HTML5
-  - CSS3
-
-- **Framework**
-  - Laravel
-  - Joomla
-  - PHP
+Ce projet a été développé en utilisant les technologies suivantes :
+---
+- **Langages de programmation**
+    - PHP
+    - HTML5
+    - CSS3
+---
+- **Frameworks**
+    - Laravel
+    - Joomla
+    - PHP
+---
 
 ### Informations supplémentaires
 
-- **Client:** Mairie
+- **Client :** Mairie
+

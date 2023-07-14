@@ -1,34 +1,130 @@
 ---
 title: Pourquoi utiliser GraphQL?
 publishDate: 2022-01-23 17:59:41
-img: /assets/portfolio/trading-bot.png
+img: /assets/articles/graphql.png
 img_alt: Iridescent ripples of a bright blue and pink liquid
-description: We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+description: "Améliorez vos API avec GraphQL : performances et flexibilité."
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - API
+  - GraphQL
+  - Performance
+  - Flexibilité
 ---
-import Carousel from "../../components/Content/Carousel.vue";
 
-## Level-two heading
-> Tell me and I forget. Teach me and I remember. Involve me and I learn.
+## Comparaison entre REST et GraphQL : Améliorer les performances avec une requête unique
 
-Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+Lorsqu'il s'agit de concevoir des API, deux approches populaires se démarquent : REST (Representational State Transfer) et GraphQL.
 
-Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel quam elementum pulvinar etiam non.
+Bien que REST soit largement utilisé depuis des années, GraphQL a émergé plus récemment et a gagné en popularité grâce à ses capacités avancées de récupération de données.
 
-### Level-three heading
+Dans cet article, nous allons comparer REST et GraphQL point par point.
 
-Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl pretium fusce.
+### Présentation de REST
 
-### Level-three heading
+REST est basé sur un modèle d'architecture client-serveur où les ressources sont exposées en tant qu'endpoints spécifiques.
 
-Sed pulvinar porttitor mi in ultricies. Etiam non dolor gravida eros pulvinar pellentesque et dictum ex. Proin eu ornare ligula, sed condimentum dui. Vivamus tincidunt tellus mi, sed semper ipsum pharetra a. Suspendisse sollicitudin at sapien nec volutpat. Etiam justo urna, laoreet ac lacus sed, ultricies facilisis dolor. Integer posuere, metus vel viverra gravida, risus elit ornare magna, id feugiat erat risus ullamcorper libero. Proin vitae diam auctor, laoreet lorem vitae, varius tellus.
+Les clients effectuent des requêtes HTTP (GET, POST, PUT, DELETE, etc.) vers ces endpoints pour récupérer ou manipuler les données.
 
-Aenean pretium purus augue, ut bibendum erat convallis quis. Cras condimentum quis velit ac mollis. Suspendisse non purus fringilla, venenatis nisl porta, finibus odio. Curabitur aliquet metus faucibus libero interdum euismod. Morbi sed magna nisl. Morbi odio nibh, facilisis vel sapien eu, tempus tincidunt erat. Nullam erat velit, sagittis at purus quis, tristique scelerisque tortor. Pellentesque lacinia tortor id est aliquam viverra. Vestibulum et diam ac ipsum mollis fringilla.
+Chaque endpoint expose une ressource spécifique et renvoie les données correspondantes dans le format spécifié (JSON, XML, etc.).
 
-#### Level-four heading
+REST est simple, largement adopté et convient parfaitement aux cas d'utilisation standard.
 
-- We noted this
-- And also this other point
+### Présentation de GraphQL
+
+GraphQL, d'autre part, est un langage de requête et une spécification pour les API développés par Facebook.
+
+Au lieu d'exposer des endpoints spécifiques, GraphQL expose un seul endpoint pour toutes les requêtes.
+Les clients envoient des requêtes GraphQL avec des champs spécifiques et reçoivent uniquement les données demandées.
+
+GraphQL offre une récupération précise des données, une meilleure efficacité et une évolutivité supérieure par rapport à REST.
+
+## Comparatif point par point
+
+### Récupération précise des données
+
+Dans REST, les endpoints renvoient souvent des données prédéfinies qui peuvent contenir plus ou moins d'informations que nécessaire.
+
+Cela peut entraîner du sur-fetching (récupération de données inutiles) ou du under-fetching (besoin de requêtes supplémentaires pour obtenir toutes les données nécessaires).
+
+En revanche, avec GraphQL, les clients spécifient exactement les champs et les relations dont ils ont besoin, évitant ainsi ces problèmes.
+
+#### Requête unique
+
+L'un des avantages majeurs de GraphQL est sa capacité à effectuer des requêtes uniques pour récupérer toutes les données nécessaires.
+
+Au lieu d'envoyer plusieurs requêtes pour obtenir différentes ressources ou relations, les clients envoient une seule requête GraphQL contenant tous les champs requis.
+
+Cela réduit considérablement le nombre de requêtes nécessaires et améliore les performances côté serveur.
+
+#### Typage fort
+
+GraphQL utilise un système de typage fort, ce qui signifie que les requêtes doivent correspondre au schéma GraphQL défini côté serveur.
+
+Cela garantit que seules les requêtes valides peuvent être exécutées et permet une meilleure communication entre le front-end et le back-end.
+
+En revanche, REST n'impose pas de typage fort et laisse la validation des données à l'implémentation spécifique de l'API.
+
+#### Évolution flexible de l'API
+
+REST a tendance à nécessiter une gestion stricte des versions de l'API pour éviter de casser les clients existants lors de l'ajout de nouvelles fonctionnalités ou de modifications de la structure des données.
+
+GraphQL, pour sa part, permet une évolution flexible de l'API sans impacter les clients existants.
+
+Les clients demandent explicitement les champs et les relations dont ils ont besoin, ce qui permet aux développeurs de modifier le schéma GraphQL en toute sécurité.
+
+### Exemples de requêtes REST converties en requêtes GraphQL
+
+Pour illustrer la différence entre REST et GraphQL, voici des exemples de requêtes REST converties en requêtes GraphQL :
+
+#### Exemple de requête REST :
+
+`GET /users/1`
+
+#### Correspondant en requête GraphQL :
+
+```graphql
+query {
+    user(id: 1) {
+        id
+        name
+        email
+    }
+}
+```
+
+
+#### Exemple de requête REST :
+
+`GET /users/1/posts`
+
+#### Correspondant en requête GraphQL :
+
+```graphql
+query {
+    user(id: 1) {
+        posts {
+            id
+            title
+            content
+        }
+    }
+
+    #Ou pourquoi pas
+    posts(user_id: 1) {
+        id
+        title
+        content
+    }
+}
+```
+
+## Conclusion
+> REST et GraphQL ont chacun leurs propres forces et cas d'utilisation.
+>
+> Il est essentiel de choisir l'approche qui convient le mieux à votre cas d'utilisation.
+
+REST et GraphQL sont deux approches distinctes pour la conception d'API, chacune avec ses propres forces et cas d'utilisation. Alors que REST est simple et bien adapté aux cas d'utilisation standard, GraphQL offre une récupération précise des données, une meilleure efficacité et une évolutivité supérieure grâce à sa capacité de requête unique.
+
+En évaluant attentivement les besoins de votre projet, vous pouvez choisir l'approche qui convient le mieux à votre cas d'utilisation spécifique. Que vous optiez pour REST, GraphQL ou une combinaison des deux, il est essentiel de concevoir des API efficaces et performantes pour offrir une expérience utilisateur optimale.
+
+J'espère que cet article vous a aidé à comprendre les différences entre REST et GraphQL et à mettre en avant la capacité de requête unique de GraphQL pour améliorer les performances côté serveur. N'hésitez pas à apporter d'autres modifications ou à me demander de l'aide supplémentaire si nécessaire !
