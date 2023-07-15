@@ -11,18 +11,16 @@ import Pill from '../../components/Pill.astro';
 interface Props {
     entry: CollectionEntry<'portfolio'>;
 }
-
-// This is a dynamic route that generates a page for every Markdown file in src/content/
-// Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
-// https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-    const work = await getCollection('portfolio');
-    return work.map((entry) => ({
+    const work = await getCollection(
+        'portfolio',
+        ({data}) => !data.draft
+    );
+    return work.map((entry,) => ({
         params: {slug: entry.slug},
         props: {entry},
     }));
 }
-
 const {entry} = Astro.props;
 const {Content} = await entry.render();
 ---
@@ -52,6 +50,7 @@ const {Content} = await entry.render();
                     <div class="content">
                         <Content/>
                     </div>
+                    {entry.data.ai && <p class="w-full text-right italic ">Généré à l'aide d'une IA</p>}
                 </div>
             </main>
         </div>

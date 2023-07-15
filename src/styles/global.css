@@ -1,4 +1,7 @@
 
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --swup-translate-right: 10%;
     --swupe-translate-left: -10%;

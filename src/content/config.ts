@@ -10,6 +10,8 @@ export const collections = {
             tags: z.array(z.string()),
             img: z.string(),
             img_alt: z.string().optional(),
+            ai: z.boolean().optional(),
+            draft: z.boolean().optional(),
         }),
     }),
     articles: defineCollection({
@@ -21,6 +23,8 @@ export const collections = {
             tags: z.array(z.string()),
             img: z.string(),
             img_alt: z.string().optional(),
+            ai: z.boolean().optional(),
+            draft: z.boolean().optional(),
         }),
     }),
 };

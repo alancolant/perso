@@ -5,146 +5,175 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="À propos | Alan COLANT" description="Vous souhaitez découvrir plus d'informations conçernant le développeur/concepteur Alan COLANT">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="À propos"
-				tagline="Merci pour votre visite. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
-			>
-				<!--<img-->
-				<!--	width="1553"-->
-				<!--	height="873"-->
-				<!--	src="/assets/at-work.jpg"-->
-				<!--	alt="Jeanine White at work with a colleague"-->
-				<!--/>-->
-			</Hero>
+<BaseLayout title="À propos | Alan COLANT"
+            description="Vous souhaitez découvrir plus d'informations conçernant le développeur/concepteur Alan COLANT">
+    <div class="stack gap-20">
+        <main class="wrapper about">
+            <Hero
+                    title="À propos"
+                    tagline="Merci pour votre visite. Lisez ci-dessous pour en savoir plus sur moi-même et mon parcours."
+            >
+                <!--<img-->
+                <!--	width="1553"-->
+                <!--	height="873"-->
+                <!--	src="/assets/at-work.jpg"-->
+                <!--	alt="Jeanine White at work with a colleague"-->
+                <!--/>-->
+            </Hero>
 
-			<section>
-				<h2 class="section-title">Expérience</h2>
-				<div class="content">
-					<p>
-						Uni-deal
-						Contrat en alternance · 3 ans
-						Développeur
-						sept. 2021 - aujourd’hui
-						Paris et périphérie
-						- Mise en place d'un environnement Haute-Disponibilité avec Kubernetes (k8s)
-						- Développement d'application frontend d'affichage d'annonces immobilières (Nuxt/NodeJS)
-						- Migration d'une API REST vers GraphQL
-						- Transformation d'un monolithe en micro services "scalables"
-						- Intégration d'un moteur de recherche sur une application frontend (Elasticsearch)
-						- Création d'une solution de test (Behave)
-						Apprenti développeur web
-						août 2020 - août 2021 · 1 an 1 mois
-						Strasbourg, Grand Est, France
-						- Création d'une application web d'importation et d'affichage d'annonces immobilières
-						- Création d'une application web d'alertes à la population en cas de crue
-						- Création d'un micro-service Golang pour importer des images, les redimensionner, et vérifier la présence de caractère indésirables.
-						- Création de module pour une solution ERP d'entreprise
-						- Développement d'un système de trading en Python avec son site vitrine
-					</p>
-					<p>
-						Développeur informatique
-						CFI Technologies · Temps plein
-						févr. 2020 - mars 2020 · 2 mois
-						France
-						- Création de maquettes pdf pour de l'impression personnalisée
-					</p>
-					<p>
-						Développeur web
-						Uni-deal · CDD
-						juil. 2017 - sept. 2017 · 3 mois
-						Strasbourg, Grand Est, France
-						- Création d'une interface web permettant de récupérer des données radio et de suivre l'état des différents capteurs.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Diplômes</h2>
-				<div class="content">
-					<p>Développeur d'application Python, BAC +4/5</p>
-					<p>Développeur Web, BAC +2</p>
-					<p>Baccalauréat Général (S)</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Compétences</h2>
-				<div class="content">
-					<p>Linux</p>
-					<p>PostgreSQL</p>
-					<p>Python</p>
-					<p>Golang</p>
-					<p>Elasticsearch</p>
-					<p>PHP</p>
-					<p>Laravel</p>
-					<p>Docker</p>
-					<p>Kubernetes</p>
-					<p>Nuxt.js/Vue.js</p>
-					<p>HTML/CSS/Javascript</p>
-					<p>Node.js</p>
-				</div>
-			</section>
-		</main>
+            <section>
+                <h2 class="section-title">Expérience</h2>
+                <ul class="content">
+                    <li>
+                        <h3>Développeur Web</h3>
+                        <p>
+                            Uni-deal
+                            <br>
+                            Strasbourg, France
+                            <br>
+                            Septembre 2021 - Aujourd'hui
+                        </p>
+                        <p>
+                            - Mise en place d'un environnement Haute-Disponibilité avec Kubernetes (k8s)<br/>
+                            - Développement d'application frontend d'affichage d'annonces immobilières (Nuxt/NodeJS)<br/>
+                            - Migration d'une API REST vers GraphQL<br/>
+                            - Transformation d'un monolithe en micro services "scalables"<br/>
+                            - Intégration d'un moteur de recherche sur une application frontend (Elasticsearch)<br/>
+                            - Création d'une solution de test (Behave)
+                        </p>
+                    </li>
+                    <li class="mt-4">
+                        <h3>Apprenti développeur web</h3>
+                        <p>
+                            Uni-deal
+                            <br>
+                            Strasbourg, France
+                            <br>
+                            Août 2020 - Août 2021
+                        </p>
+                        <p>
+                            - Création d'une application web d'importation et d'affichage d'annonces immobilières<br/>
+                            - Création d'une application web d'alertes à la population en cas de crue<br/>
+                            - Création d'un micro-service Golang pour importer des images, les redimensionner, et
+                            vérifier la présence de caractère indésirables.
+                            - Création de module pour une solution ERP d'entreprise<br/>
+                            - Développement d'un système de trading en Python avec son site vitrine
+                        </p>
+                    </li>
+                    <li class="mt-4">
+                        <h3>Développeur informatique</h3>
+                        <p>
+                            CFI Technologies
+                            <br>
+                            France
+                            <br>
+                            Février 2020 - Mars 2020
+                        </p>
+                        <p>
+                            - Création de maquettes pdf pour de l'impression personnalisée
+                        </p>
+                    </li>
+                    <li class="mt-4">
+                        <h3>Développeur web</h3>
+                        <p>
+                            Uni-deal
+                            <br>
+                            Strasbourg, France
+                            <br>
+                            Juillet 2017 - Septembre 2017
+                        </p>
+                        <p>
+                            - Création d'une interface web permettant de récupérer des données radio et de suivre l'état
+                            des différents capteurs.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2 class="section-title">Diplômes</h2>
+                <div class="content">
+                    <p>Développeur d'application Python, BAC +4/5</p>
+                    <p>Développeur Web, BAC +2</p>
+                    <p>Baccalauréat Général (S)</p>
+                </div>
+            </section>
+            <section>
+                <h2 class="section-title">Compétences</h2>
+                <div class="content">
+                    <p>Linux</p>
+                    <p>PostgreSQL</p>
+                    <p>Python</p>
+                    <p>Golang</p>
+                    <p>Elasticsearch</p>
+                    <p>PHP</p>
+                    <p>Laravel</p>
+                    <p>Docker</p>
+                    <p>Kubernetes</p>
+                    <p>Nuxt.js/Vue.js</p>
+                    <p>HTML/CSS/Javascript</p>
+                    <p>Node.js</p>
+                </div>
+            </section>
+        </main>
 
-		<ContactCTA />
-	</div>
+        <ContactCTA/>
+    </div>
 </BaseLayout>
 
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+    }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+    img {
+        margin-top: 1.5rem;
+        border-radius: 1.5rem;
+        box-shadow: var(--shadow-md);
+    }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gray-200);
+    }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+    .section-title {
+        grid-column-start: 1;
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+    }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+    .content {
+        grid-column: 2 / 4;
+    }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+    .content :global(a) {
+        text-decoration: 1px solid underline transparent;
+        text-underline-offset: 0.25em;
+        transition: text-decoration-color var(--theme-transition);
+    }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+    .content :global(a:hover),
+    .content :global(a:focus) {
+        text-decoration-color: currentColor;
+    }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+    @media (min-width: 50em) {
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 60% 1fr;
+        }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+        .about > :global(:first-child) {
+            grid-column-start: 2;
+        }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+        section {
+            display: contents;
+            font-size: var(--text-lg);
+        }
+    }
 </style>

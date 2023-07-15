@@ -16,7 +16,7 @@ interface Props {
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-    const articles = await getCollection('articles');
+    const articles = await getCollection('articles',({data}) => !data.draft);
     return articles.map((article) => ({
         params: {slug: article.slug},
         props: {entry: article},
@@ -52,6 +52,7 @@ const {Content} = await entry.render();
                     <div class="content">
                         <Content/>
                     </div>
+                    {entry.data.ai && <p class="w-full text-right italic ">Généré à l'aide d'une IA</p>}
                 </div>
             </main>
         </div>

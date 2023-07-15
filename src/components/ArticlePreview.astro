@@ -10,7 +10,7 @@ const {format = 'large'} = Astro.props;
 const {data, slug} = Astro.props.article;
 ---
 <a class="card" href={`/articles/${slug}`} rel="prefetch-intent" style={format==='small' && 'height:auto;'}>
-    <span class="title text-sm">{data.title}</span>
+    <span class="title text-sm text-red-500">{data.title}</span>
     <img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async"/>
     <span class="publishDate">{data.publishDate.toLocaleDateString()}</span>
 </a>
