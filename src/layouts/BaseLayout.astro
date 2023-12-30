@@ -49,8 +49,9 @@ const {title, description} = Astro.props;
     });
 </script>
 
-<html lang="en">
+<html lang="fr">
 <head>
+    <slot name="head" />
     <link rel="sitemap" href="/sitemap-index.xml"/>
     <MainHead title={title} description={description}/>
 </head>

@@ -1,0 +1,38 @@
+---
+import {getCollection} from 'astro:content';
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import ContactCTA from '../../components/ContactCTA.astro';
+import PortfolioPreview from '../../components/PortfolioPreview.astro';
+import Hero from '../../components/Hero.astro';
+import Grid from '../../components/Grid.astro';
+import OpenSourcePreview from "../../components/OpenSourcePreview.astro";
+
+const projects = (await getCollection('open-source', ({data}) => !data.draft));
+---
+
+<BaseLayout
+        title="Open Source | Alan COLANT"
+        description="Vous retrouverez ici l'ensemble de mes projets Open-Source, libre à vous de les implémenter."
+>
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-8">
+            <Hero
+                    title="Mon réalisations Open-Source"
+                    tagline="Libre à vous d'utilisez ces différents outils."
+                    align="start"
+            />
+            <Grid variant="offset">
+                {
+                    projects.map((project) => (
+                            <li>
+                                <OpenSourcePreview project={project}/>
+                            </li>
+                    ))
+                }
+            </Grid>
+        </main>
+        <ContactCTA/>
+    </div>
+</BaseLayout>

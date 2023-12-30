@@ -27,4 +27,16 @@ export const collections = {
             draft: z.boolean().optional(),
         }),
     }),
+    "open-source": defineCollection({
+        type: 'content',
+        schema: z.object({
+            title: z.string(),
+            project: z.string(),
+            draft: z.boolean().optional(),
+            tags: z.array(z.string()),
+
+            img: z.string().optional(),
+            img_alt: z.string().optional(),
+        }),
+    }),
 };

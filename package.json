@@ -17,6 +17,10 @@
     "@astrojs/tailwind": "^4.0.0",
     "@astrojs/vue": "^2.2.1",
     "astro": "^2.8.1",
+    "marked": "^11.1.0",
+    "marked-base-url": "^1.1.2",
+    "marked-highlight": "^2.1.0",
+    "shiki": "^0.14.7",
     "swup": "^3.1.1",
     "tailwindcss": "^3.0.24",
     "vue": "^3.2.30"
@@ -27,6 +31,7 @@
     "@swup/scripts-plugin": "^1.1.0",
     "@swup/scroll-plugin": "^2.0.3",
     "@tailwindcss/typography": "^0.5.9",
+    "astro-remote": "^0.2.4",
     "embla-carousel-vue": "^8.0.0-rc11"
   }
 }
